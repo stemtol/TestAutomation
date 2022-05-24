@@ -8,9 +8,9 @@ from selenium.common import exceptions
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-serv_obj = Service('C:\Drivers\chromedriver.exe')
-driver = webdriver.Chrome(service=serv_obj)
-
+#serv_obj = Service('C:\Drivers\chromedriver.exe')
+driver = webdriver.Chrome('C:\Drivers\chromedriver.exe')
+#service=serv_obj
 driver.get("https://opensource-demo.orangehrmlive.com/")
 driver.maximize_window()
 
