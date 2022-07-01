@@ -7,8 +7,9 @@ from selenium.common import exceptions
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-serv_obj = Service('C:\Drivers\chromedriver.exe')
+serv_obj = Service(r"C:\Users\stemt\Documents\SeleniumDrivers\chromedriver.exe")
 driver = webdriver.Chrome(service=serv_obj)
+
 
 driver.get("http://www.deadlinkcity.com/")
 driver.maximize_window()
