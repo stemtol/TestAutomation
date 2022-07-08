@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
-serv_obj = Service('C:\Drivers\chromedriver.exe')
+serv_obj = Service(r'C:\Users\stemt\Documents\SeleniumDrivers\chromedriver.exe')
 driver = webdriver.Chrome(service=serv_obj)
 driver.implicitly_wait(10)
 

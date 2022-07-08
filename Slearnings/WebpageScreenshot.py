@@ -8,7 +8,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import os
 
-serv_obj = Service(r"C:\Users\stemt\Documents\SeleniumDrivers\chromedriver.exe")
+serv_obj = Service("C:\Users\stemt\Documents\SeleniumDrivers\chromedriver.exe")
 driver = webdriver.Chrome(service=serv_obj)
 
 
