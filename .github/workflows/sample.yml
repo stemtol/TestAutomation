@@ -6,14 +6,24 @@ on:
       - master
 
 jobs:
-  test:
-    name: Do Something
+  build:
+  
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Setup Python
-        uses: actions/setup-python@v2.3.3
-        
-      -   uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+      - name: Python Dependency Installation
+        uses: py-actions/py-dependency-install@v3.0.0
+      - name: Install plugin
+        run: pip install pytest-github-actions-annotate-failures
+      - name: Test with pytest
+        run: |
+          pytest --alluredir=allure-results --browser chrome_headless
+
 
       - name: Run Code
         run: python Slearnings/ExpediaAgain.py
